@@ -1,10 +1,16 @@
 # React Shop List
 
-This is a example app to show some Firebase features. It is a very simple Shopping List using React.
+This is a example app to show some Firebase features. It is a very simple Shopping List using React. You can add, check, remove the items and clear all the items from the list.
+
+Demo: https://react-shop-list-ec784.web.app/
 
 ### To run this project
 - `npm install`
-- `npm start`
+- `npm start` (database will not work, you have to configure your own firebase project)
+
+Suggestion: if you want to fully deploy this app in your firebase project, you'll have to:
+- download the zip of the main branch. That will make the process easir because it comes without git
+- remove `.github` folder 
 
 ### Installing and configuring Firebase
 - Install Firebase CLI: https://firebase.google.com/docs/cli#setup_update_cli
@@ -41,4 +47,11 @@ This is a example app to show some Firebase features. It is a very simple Shoppi
 
 - If you push your code to main now, it will activate the actions to build and deploy your code. Go to Firebase Console > Hosting, you'll see there is a new deploy item in the list!
 
-- There you go, just access the address `<project id>.web.app` and you'll see your react app
+---
+There you go, just access the address `<project id>.web.app` and you'll see your react app working.
+
+Remember that __configuration is not always so smooth__, so if you have problems in the process, go easy! Read the docs, check every step you made and start over if needed!
+
+That example is very basic, keep learning and evolving your apps! Visit [Firebase Docs](https://firebase.google.com/docs) and learn more!
+
+Happy firebasing! :heart:
