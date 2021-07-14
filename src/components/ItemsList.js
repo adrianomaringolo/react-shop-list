@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { ItemsService } from "../services/ItemsService";
 import styled from "styled-components";
 import { AddButton } from "./AddButton";
-import { ClearButton } from './ClearButton'
+import { ClearButton } from "./ClearButton";
 import { RemoveButton } from "./RemoveButton";
-import logo from './../logo.png';
+import logo from "./../logo.png";
 
 const ListArea = styled.div`
+  overflow-y: auto;
+  max-height: 500px;
   .item {
     border-bottom: 1px solid #ccc;
     padding: 20px;
@@ -67,7 +69,10 @@ const ListArea = styled.div`
       }
     }
   }
-  .itemToAdd {
+`;
+
+const ItemToAdd = styled.form`
+
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -86,7 +91,7 @@ const ListArea = styled.div`
       font-size: 2.2em;
       right: 10px;
     }
-  }
+  
 `;
 
 export const ItemsList = () => {
@@ -143,16 +148,15 @@ export const ItemsList = () => {
               <RemoveButton onClick={() => removeItem(item.id)}>X</RemoveButton>
             </div>
           ))}
-
-        <form className="itemToAdd" onSubmit={addItem}>
-          <input
-            type="text"
-            onChange={(e) => setTextToAdd(e.target.value)}
-            value={textToAdd}
-          />
-          <AddButton type="submit">ADD</AddButton>
-        </form>
       </ListArea>
+      <ItemToAdd className="itemToAdd" onSubmit={addItem}>
+        <input
+          type="text"
+          onChange={(e) => setTextToAdd(e.target.value)}
+          value={textToAdd}
+        />
+        <AddButton type="submit">ADD</AddButton>
+      </ItemToAdd>
     </>
   );
 };

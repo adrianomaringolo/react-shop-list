@@ -8,7 +8,6 @@ import "firebase/firestore";
 const ShopListArea = styled.div`
   background: #fff;
   max-width: 650px;
-  min-height: 800px;
   width: 100%;
   border-radius: 15px;
   box-shadow: 0 0 10px #fff, 0 0 10px #fff;
