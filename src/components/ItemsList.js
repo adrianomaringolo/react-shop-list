@@ -8,17 +8,17 @@ import logo from "./../logo.png";
 
 const ListArea = styled.div`
   overflow-y: auto;
-  max-height: 500px;
+  max-height: 400px;
   .item {
     border-bottom: 1px solid #ccc;
     padding: 20px;
-    font-size: 3em;
+    font-size: 2em;
     display: flex;
 
     input[type="checkbox"] {
       position: relative;
-      width: 3em;
-      height: 3em;
+      width: 2em;
+      height: 2em;
       color: #000;
       border: 1px solid #555;
       border-radius: 4px;
@@ -31,9 +31,9 @@ const ListArea = styled.div`
         content: "";
         display: block;
         top: 0px;
-        left: 10px;
-        width: 15px;
-        height: 27px;
+        left: 7px;
+        width: 8px;
+        height: 18px;
         border-style: solid;
         border-color: #fff;
         border-width: 0 2px 2px 0;
@@ -76,9 +76,9 @@ const ItemToAdd = styled.form`
     display: flex;
     justify-content: center;
     padding: 20px;
-    width: 90%;
     position: relative;
     input {
+      flex: 1;
       width: 80%;
       border: none;
       border-bottom: 3px solid #ccc;
@@ -87,9 +87,7 @@ const ItemToAdd = styled.form`
     }
     button {
       min-width: 50px;
-      position: absolute;
       font-size: 2.2em;
-      right: 10px;
     }
   
 `;
@@ -129,7 +127,7 @@ export const ItemsList = () => {
   return (
     <>
       <h1 className="logoArea">
-        <img src={logo} className="logo" alt="logo" /> React Shop List
+        <img src={logo} className="logo" alt="logo" /> Shop List
         <ClearButton onClick={removeAll}>CLEAR</ClearButton>
       </h1>
       <ListArea>

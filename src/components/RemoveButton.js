@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const RemoveButton = styled.button`
     margin-left: auto;
     background-color: #ec9393;
-    padding: 14px;
+    padding: 8px 20px;
     color: #fff;
     border: none;
     border-radius: 5px;
