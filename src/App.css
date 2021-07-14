@@ -1,16 +1,9 @@
 .App {
   background: rgb(255,203,45);
   background: linear-gradient(90deg, rgba(255,203,45,1) 46%, rgba(255,166,16,1) 95%, rgba(255,166,16,1) 100%);
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  padding: 10px;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-l ogo-spin infinite 20s linear;
-  }
-}

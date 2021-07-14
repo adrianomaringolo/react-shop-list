@@ -1,34 +1,36 @@
-import { db } from './../firebase'
+import { db } from "./../firebase";
 
-const itemsRef = db.collection('items')
+const itemsRef = db.collection("items");
 
 export const ItemsService = {
   getItems: async () => {
-    let result = []
-    const snapshot = await itemsRef.orderBy('name').get()
+    let result = [];
+    const snapshot = await itemsRef.get();
     
-    if (snapshot.empty) {
-      throw Error('No matching results')
-    }
-
     // change to create a ID attribute
     snapshot.forEach((doc) => {
-      result.push({ id: doc.id, ...doc.data() })
-    })
+      result.push({ id: doc.id, ...doc.data() });
+    });
 
-    return result
+    return result;
   },
-  addItem: async (item) => {
+  addItem: async (itemText) => {
     return await itemsRef.doc().set({
-      ...item,
-      updatedAt: new Date(),
-    })
+      text: itemText,
+      checked: false,
+      createdAd: new Date().toISOString(),
+    });
   },
-  editItem: async (item) => {
-    return await itemsRef.doc(activity.id).update({
-      ...item,
-      updatedAt: new Date(),
-    })
+  checkItem: async (itemId, checked) => {
+    return await itemsRef.doc(itemId).update({
+      checked,
+      updatedAt: new Date().toISOString(),
+    });
   },
-  removeItem: async (activityId) => await itemsRef.doc(activityId).delete(),
-}
+  removeItem: async (itemId) => await itemsRef.doc(itemId).delete(),
+  removeAll: async () => {
+    (await itemsRef.get()).forEach(async (doc) => {
+      await itemsRef.doc(doc.id).delete()
+    });
+  },
+};

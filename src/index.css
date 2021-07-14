@@ -2,14 +2,15 @@
 
 html, body, #root {
   margin: 0;
-  font-family: 'Zen Loop', cursive;
+  font-family: 'Zen Loop', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 * {
-  font-family: 'Zen Loop', cursive;
+  font-family: 'Zen Loop', sans-serif;
+  box-sizing: border-box;
 }
 
 code {

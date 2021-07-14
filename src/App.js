@@ -1,8 +1,9 @@
+import "./App.css";
 
-import './App.css';
-import logo from './logo.png';
-import styled from 'styled-components'
-import { ClearButton } from './components/ClearButton'
+import styled from "styled-components";
+
+import { ItemsList } from "./components/ItemsList";
+import "firebase/firestore";
 
 const ShopListArea = styled.div`
   background: #fff;
@@ -28,19 +29,15 @@ const ShopListArea = styled.div`
 
   .logo {
     height: 60px;
-    margin-right: 20px
+    margin-right: 20px;
   }
-`
+`;
 
 function App() {
-  
   return (
     <div className="App">
       <ShopListArea>
-        <h1 className="logoArea">
-          <img src={logo} className="logo" alt="logo" /> React Shop List
-          <ClearButton>CLEAR</ClearButton>
-        </h1>
+        <ItemsList />
       </ShopListArea>
     </div>
   );

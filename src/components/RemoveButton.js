@@ -1,14 +1,13 @@
 import styled from 'styled-components'
 
-export const AddButton = styled.button`
+export const RemoveButton = styled.button`
     margin-left: auto;
-    background-color: green;
+    background-color: #ec9393;
     padding: 14px;
     color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 0.5em;
-    margin-right: 20px;
     font-weight: 600;
     cursor: pointer;
     transition: opacity 0.5s;
