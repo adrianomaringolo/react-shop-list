@@ -10,7 +10,6 @@ const ShopListArea = styled.div`
   max-width: 650px;
   width: 100%;
   border-radius: 15px;
-  box-shadow: 0 0 10px #fff, 0 0 10px #fff;
 
   .logoArea {
     display: flex;
