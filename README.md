@@ -31,6 +31,11 @@ This is a example app to show some Firebase features. It is a very simple Shoppi
         9 - last: link with your github repo
         10 - leave the defaults for the others questions
 
+##### Configure env variables
+ There should a `.env` file for your app. But *BE CAREFUL*, that file contains sensitive information, so you should not commit that file!
+ My recommendation is to include the [GitHub Actions environment VARs](https://docs.github.com/en/actions/reference/environment-variables) in the [Github Repo Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+
+ For learning purposes, you can create a PRIVATE repo and commit your `.env` file. But you should remove the `env` area from the GitHub actions `firebase-hosting-merge.yml` (line 12)
 
 - After the previous steps, some files and the folder `.github` will be created. The last one contains the configuration for CI/CD with [Github actions](https://github.com/features/actions)
 
