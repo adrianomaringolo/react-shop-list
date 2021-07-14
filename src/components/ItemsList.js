@@ -19,7 +19,7 @@ const ListArea = styled.div`
       position: relative;
       width: 3em;
       height: 3em;
-      color: $black;
+      color: #000;
       border: 1px solid #555;
       border-radius: 4px;
       appearance: none;
