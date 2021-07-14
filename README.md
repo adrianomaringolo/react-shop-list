@@ -38,10 +38,12 @@ Suggestion: if you want to fully deploy this app in your firebase project, you'l
         10 - leave the defaults for the others questions
 
 ##### Configure env variables
- There should a `.env` file for your app. But *BE CAREFUL*, that file contains sensitive information, so you should not commit that file!
- My recommendation is to include the [GitHub Actions environment VARs](https://docs.github.com/en/actions/reference/environment-variables) in the [Github Repo Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets).
+ There should a `.env` file for your app. But __*BE CAREFUL*, that file contains sensitive information, so you should not commit that file!__
+ My recommendation is to include the [GitHub Actions environment VARs](https://docs.github.com/en/actions/reference/environment-variables) in the [Github Repo Secrets](https://docs.github.com/en/actions/reference/encrypted-secrets). This is the way I did in this repo, you'll see there is no `.env` file commited, just a empty on as `model.env`.
 
- For learning purposes, you can create a PRIVATE repo and commit your `.env` file. But you should remove the `env` area from the GitHub actions `firebase-hosting-merge.yml` (line 12)
+ For that suggestion you need to learn a little bit about Github Actions.
+ 
+ For learning purposes, you can create a PRIVATE repo and commit your `.env` file.
 
 - After the previous steps, some files and the folder `.github` will be created. The last one contains the configuration for CI/CD with [Github actions](https://github.com/features/actions)
 
